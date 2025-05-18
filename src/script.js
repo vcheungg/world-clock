@@ -1,11 +1,13 @@
 function updateTime() {
-  let romeElement = document.querySelector("#rome");
-  if (romeElement) {
-    let romeDateElement = romeElement.querySelector(".date");
-    let romeTimeElement = romeElement.querySelector(".time");
-    let romeTime = moment().tz("Europe/Rome");
-    romeDateElement.innerHTML = romeTime.format("MMMM Do YYYY");
-    romeTimeElement.innerHTML = romeTime.format("h:mm:ss [<small>]A[</small>]");
+  let honoluluElement = document.querySelector("#honolulu");
+  if (honoluluElement) {
+    let honoluluDateElement = honoluluElement.querySelector(".date");
+    let honoluluTimeElement = honoluluElement.querySelector(".time");
+    let honoluluTime = moment().tz("Pacific/Honolulu");
+    honoluluDateElement.innerHTML = honoluluTime.format("MMMM Do YYYY");
+    honoluluTimeElement.innerHTML = honoluluTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
   let berlinElement = document.querySelector("#berlin");
   if (berlinElement) {
@@ -14,6 +16,16 @@ function updateTime() {
     let berlinTime = moment().tz("Europe/Berlin");
     berlinDateElement.innerHTML = berlinTime.format("MMMM Do YYYY");
     berlinTimeElement.innerHTML = berlinTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  let cairoElement = document.querySelector("#cairo");
+  if (cairoElement) {
+    let cairoDateElement = cairoElement.querySelector(".date");
+    let cairoTimeElement = cairoElement.querySelector(".time");
+    let cairoTime = moment().tz("Africa/Cairo");
+    cairoDateElement.innerHTML = cairoTime.format("MMMM Do YYYY");
+    cairoTimeElement.innerHTML = cairoTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
