@@ -36,6 +36,9 @@ function updateSelectedCityTime() {
 
 function cityChange(event) {
   selectedTimeZone = event.target.value;
+  if (selectedTimeZone === "current") {
+    selectedTimeZone = moment.tz.guess();
+  }
   updateSelectedCityTime();
 }
 updateTime();
